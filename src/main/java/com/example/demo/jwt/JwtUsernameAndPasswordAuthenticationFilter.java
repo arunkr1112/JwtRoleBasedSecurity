@@ -71,10 +71,6 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
                 .compact();
 
         String jwt = jwtConfig.getAuthorizationHeader() + ":" + jwtConfig.getTokenPrefix() + token;
-        response.addHeader(jwtConfig.getAuthorizationHeader(), jwtConfig.getTokenPrefix() + token);
-       /* response.getWriter().flush();
-        response.getWriter().close();*/
-
         MyResponseObject responseObj = new MyResponseObject();
         responseObj.setStatus(HttpStatus.OK.value());
         responseObj.setJwt(jwt);

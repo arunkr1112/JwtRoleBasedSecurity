@@ -19,15 +19,15 @@ import java.util.stream.Collectors;
 
 import static com.example.demo.security.ApplicationUserRole.*;
 
-@Repository("fake")
-public class FakeApplicationUserDaoService implements ApplicationUserDao {
+@Repository("flexibalService")
+public class DataBaseRealApplicationUserDaoService implements ApplicationUserDao {
 
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
     UserDao userDao;
     @Autowired
-    public FakeApplicationUserDaoService(PasswordEncoder passwordEncoder) {
+    public DataBaseRealApplicationUserDaoService(PasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
     }
 
